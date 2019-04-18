@@ -65,9 +65,9 @@ hub:
   videoRecordingEnabled: true
   # the limits/requests below are for Selenium pods (containers)
   cpuRequest: 250m
-  cpuLimit: 1000m
+  cpuLimit: 500m
   memRequest: 500Mi
-  memLimit: 2Gi
+  memLimit: 1Gi
   screenWidth: 1440
   screenHeight: 900
   timeZone: "UTC"
@@ -149,14 +149,14 @@ ingress:
   enabled: false
   tls: false
   # secretName: my-tls-cert # only needed if tls above is true
-  hostname: zalenium.foobar.com
+  hostname: zalenium.savethatname.com
   # If your ingress host name is shared with multiple
   # applications, Enter a path starting with / (eg. /zalenium)
   # If your ingress host name is only for Zalenium,
   # set the path as / (root)
-  path: /
+  path: /zalenium
   annotations:
-    # kubernetes.io/ingress.class: "nginx"
+    kubernetes.io/ingress.class: "nginx"
     # kubernetes.io/tls-acme: "true"
   ## For RBAC support:
 
